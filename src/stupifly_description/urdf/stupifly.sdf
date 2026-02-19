@@ -1,0 +1,268 @@
+<sdf version='1.9'>
+  <model name='Assem1'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.00170644441190401 -0.00010951248939392 0.020137507133009 0 0 0</pose>
+        <mass>0.287718433342603</mass>
+        <inertia>
+          <ixx>0.00043625048274275002</ixx>
+          <ixy>-1.0528143175783e-05</ixy>
+          <ixz>-6.6221664502829403e-11</ixz>
+          <iyy>0.00055263825674581302</iyy>
+          <iyz>-4.7656024668217597e-11</iyz>
+          <izz>0.00073303749274861705</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.0245098 0.0245098 0.0245098 1</diffuse>
+          <ambient>0.0245098 0.0245098 0.0245098 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Blue_prop1' type='revolute'>
+      <pose relative_to='base_link'>-0.17257 0.14811 -0.052109 -0.09484899999999999 -0.04445100000000001 0.43793</pose>
+      <parent>base_link</parent>
+      <child>B_prop1_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>900</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='B_prop1_Link'>
+      <pose relative_to='Blue_prop1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>7.31459151581682e-07 -2.01874710653582e-06 -0.00617262757614656 0 0 0</pose>
+        <mass>0.0047056040020822297</mass>
+        <inertia>
+          <ixx>1.85522428966344e-05</ixx>
+          <ixy>7.79017193825592e-06</ixy>
+          <ixz>-3.5883541348060902e-12</ixz>
+          <iyy>3.4554203858860999e-06</iyy>
+          <iyz>1.3959908485915e-11</iyz>
+          <izz>2.19436691246909e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='B_prop1_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/B_prop1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='B_prop1_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/B_prop1_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784314 0.784314 0.784314 1</diffuse>
+          <ambient>0.784314 0.784314 0.784314 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Blue_prop2' type='revolute'>
+      <pose relative_to='base_link'>-0.1434 -0.17706 -0.051992 0.015067 -0.10363 0.73026</pose>
+      <parent>base_link</parent>
+      <child>B_prop2_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>900</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.01</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='B_prop2_Link'>
+      <pose relative_to='Blue_prop2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>1.83252260643751e-07 -1.98326826152118e-06 -0.00617266232573843 0 0 0</pose>
+        <mass>0.00470560155567302</mass>
+        <inertia>
+          <ixx>2.1607987517363399e-05</ixx>
+          <ixy>2.2837779424479901e-06</ixy>
+          <ixz>-1.1921805654799701e-12</ixz>
+          <iyy>3.9960494981713e-07</iyy>
+          <iyz>4.4653799645778301e-12</iyz>
+          <izz>2.19435983745731e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='B_prop2_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/B_prop2_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='B_prop2_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/B_prop2_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784314 0.784314 0.784314 1</diffuse>
+          <ambient>0.784314 0.784314 0.784314 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='White_prop3' type='revolute'>
+      <pose relative_to='base_link'>0.1819 -0.14798 -0.050454 0.10376 0.014184 0.73953</pose>
+      <parent>base_link</parent>
+      <child>W_prop3_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>900</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.01</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='W_prop3_Link'>
+      <pose relative_to='White_prop3'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-1.28649024433436e-07 -2.19146189972541e-07 -0.00617277347433426 0 0 0</pose>
+        <mass>0.0047054486798630097</mass>
+        <inertia>
+          <ixx>2.16068682565638e-05</ixx>
+          <ixy>2.2825990392904501e-06</ixy>
+          <ixz>2.4895087422351199e-12</ixz>
+          <iyy>3.9936138938589699e-07</iyy>
+          <iyz>4.7092728291607001e-12</iyz>
+          <izz>2.19422332847507e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='W_prop3_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/W_prop3_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='W_prop3_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/W_prop3_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784314 0.784314 0.784314 1</diffuse>
+          <ambient>0.784314 0.784314 0.784314 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='White_prop4' type='revolute'>
+      <pose relative_to='base_link'>0.15258 0.17729 -0.052087 -0.01528799999999999 0.1036 0.7281199999999999</pose>
+      <parent>base_link</parent>
+      <child>W_prop4_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>900</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0.01</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='W_prop4_Link'>
+      <pose relative_to='White_prop4'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-1.90927498158744e-07 -3.74112121726e-07 -0.00617235089568641 0 0 0</pose>
+        <mass>0.0047057749017012799</mass>
+        <inertia>
+          <ixx>2.1566225021485799e-05</ixx>
+          <ixy>2.4777528435492699e-06</ixy>
+          <ixz>6.3531279055652199e-12</ixz>
+          <iyy>4.43219552098724e-07</iyy>
+          <iyz>2.3552311370664901e-11</iyz>
+          <izz>2.1945454703146501e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='W_prop4_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/W_prop4_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='W_prop4_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://stupifly_description/meshes/W_prop4_Link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.784314 0.784314 0.784314 1</diffuse>
+          <ambient>0.784314 0.784314 0.784314 1</ambient>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,26 @@
+<launch>
+  <!-- Launch Gazebo with your world -->
+  <include file="$(find stupifly_gazebo)/launch/stupifly_world.launch" />
+  
+  <!-- Publish robot description (needed for ROS-Gazebo bridge) -->
+  <param name="robot_description" 
+         textfile="$(find stupifly_description)/urdf/stupifly.sdf" />
+
+  <!-- Static TF (use tf2_ros for ROS Noetic/ROS2) -->
+  <node name="tf_footprint_base"
+        pkg="tf2_ros"
+        type="static_transform_publisher"
+        args="0 0 0 0 0 0 base_link base_footprint" />
+
+  <!-- Spawn model in Gazebo -->
+  <node name="spawn_model"
+        pkg="gazebo_ros"
+        type="spawn_model"
+        args="-param robot_description -sdf -model stupifly"
+        output="screen" />
+
+  <!-- Optional: joint state publisher if needed -->
+  <node name="robot_state_publisher"
+        pkg="robot_state_publisher"
+        type="robot_state_publisher" />
+</launch>
